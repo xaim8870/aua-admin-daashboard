@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AUA Admin Dashboard"
+version = "1.0.0"
+id = "artifacts/aua-admin"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25291
+
+[services.development]
+run = "pnpm --filter @workspace/aua-admin run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/aua-admin", "run", "build" ]
+publicDir = "artifacts/aua-admin/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25291"
+BASE_PATH = "/"
