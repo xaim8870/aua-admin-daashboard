@@ -65,7 +65,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
           </SidebarFooter>
         </Sidebar>
         <main className="flex-1 flex flex-col min-w-0">
-          <header className="h-16 flex items-center justify-between px-6 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
+          <header className="h-16 flex items-center justify-between px-6 border-b border-border/50 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 sticky top-0 z-10">
              <div className="font-medium text-sm text-muted-foreground">Operations Cockpit</div>
           </header>
           <div className="flex-1 p-6 md:p-8 max-w-7xl mx-auto w-full">
